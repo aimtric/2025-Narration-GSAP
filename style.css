@@ -1,0 +1,170 @@
+/* Reset & global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0a0a0a;
+  color: #c38728;
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+/* General section styling */
+section {
+  min-height: 100vh;
+  padding: 8vh 8vw;
+  display: flex;
+  flex-direction: column; /* ensures vertical stacking */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-gif {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.hero-car {
+  position: relative;
+  z-index: 2;
+  width: 80%;
+  max-width: 900px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hero-subtitle {
+  color: #c38728;
+  margin-top: 12px;
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+/* Performance section */
+.performance {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  padding: 60px 10vw;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+.performance-item {
+  text-align: center;
+  margin: 20px;
+}
+
+.performance-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.performance-item .number {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Porsche section showcase */
+.porsche-showcase {
+  position: relative;
+  width: 100%;
+  min-height: 150vh;
+  background: #0a0a0a;
+  color: #c38728;
+  padding: 10vh 8vw;
+  overflow: hidden;
+}
+
+/* Images */
+.images {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+/* Images flottantes */
+.img {
+  position: absolute;
+  width: 40%;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.4s ease;
+}
+
+.img1 {
+  top: 20%;
+  left: 5%;
+  z-index: 3;
+}
+
+.img2 {
+  top: 25%;
+  right: 5%;
+  z-index: 2;
+}
+
+.img3 {
+  top: 82%;
+  left: 5%;
+  z-index: 1;
+}
+
+/* Text between images */
+.text {
+  position: absolute;
+  bottom: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  text-align: center;
+  color: #c38728;
+}
+
+.text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #d4a34b;
+}
+
+/* Optional details animation */
+.details-title,
+.details-text {
+  opacity: 0;
+  transform: translateY(30px);
+}
